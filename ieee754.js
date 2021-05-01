@@ -1,3 +1,4 @@
+const exports = {};
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
   let e, m
@@ -101,3 +102,5 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
   buffer[offset + i - d] |= s * 128
 }
+const ieee754 = exports;
+export { ieee754 };
